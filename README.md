@@ -18,8 +18,7 @@ Swagger is tool to create and use REST API defintions. You write Open API Specif
 
   1. Swagger UI - for automatically generate interactive api documentation (really awesome)
 
-  2. Swagger CodeGen - for automatically generate client/server side code in different programming languages. (very cool    
-     features)
+  2. Swagger CodeGen - for automatically generate client/server side code in different programming languages. (very cool features)
 
   3. Swagger Hub - to store and manage your OAS files and API definitions.
 
@@ -35,4 +34,4 @@ This Tutorial contains two assignments to create OAS file using swagger editor a
   You can see Swagger UI same as image attached below:
   ![alt text](https://github.com/AVINASH793/OAS-file-and-Swagger-Tutorial/blob/master/SwaggerUI.png "Logo Title Text 1")
 
-2. Stripe Assignment: This contain assignment with step to step guide to make OAS file and 
+2. Stripe Assignment: This contain assignment with step to step guide to make OAS file (with real REST API) and use swagger tool for various purposes as mentioned above.
