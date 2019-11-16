@@ -1,14 +1,14 @@
 swagger: '2.0'
 info:
   version: 2019-02-19
-  title: Stripe Usage Records
+  title: StripeAPI
   description: Usage records allow you to report customer usage and metrics to Stripe for [metered billing]( https://stripe.com/docs/billing/subscriptions/metered-billing) of subscription plans.
 
 host: api.stripe.com
 basePath: /v1
 schemes:
   - https
-  
+
 consumes:
   - application/json
 produces:
@@ -37,15 +37,15 @@ paths:
         - name: newUsageRecord
           in: body
           required: true
-          schema: 
+          schema:
             $ref: '#/definitions/newUsageRecord'
           description: New usage record
       responses:
         200:
           description: Successful response
           schema:
-            $ref: '#/definitions/usageRecord'    
-            
+            $ref: '#/definitions/usageRecord'
+
   /subscription_items/{subscription_item}/usage_record_summaries:
     # Lists usage record summaries
     get:
@@ -81,18 +81,18 @@ paths:
         200:
           description: Successful response
           schema:
-            $ref: '#/definitions/usageRecordSummary'          
+            $ref: '#/definitions/usageRecordSummary'
 
 definitions:
   # Usage record
   usageRecord:
     properties:
-      id: 
+      id:
         type: string
         description: Unique identifier for the object.
       object:
         type: string
-        description: String representing the objectâ€™s type. Objects of the same type share the same value. 
+        description: String representing the objectâ€™s type. Objects of the same type share the same value.
         enum:
           - usage_record
       livemode:
@@ -117,25 +117,25 @@ definitions:
         minimum: 0
       subscription_item:
         type: string
-        description: The ID of the subscription item this usage record contains data for.      
+        description: The ID of the subscription item this usage record contains data for.
       timestamp:
         type: integer
-        description: The timestamp for the usage event. This timestamp must be within the current billing period of the subscription of the provided `subscription_item`. 
+        description: The timestamp for the usage event. This timestamp must be within the current billing period of the subscription of the provided `subscription_item`.
       action:
         type: integer
-        description: Valid values are `increment` (default) or `set`. When using `increment` the specified `quantity` will be added to the usage at the specified timestamp. The `set` action will overwrite the usage quantity at that timestamp. If the subscription has [billing thresholds](https://stripe.com/docs/api/subscriptions/object#subscription_object-billing_thresholds), `increment` is the only allowed value.  
+        description: Valid values are `increment` (default) or `set`. When using `increment` the specified `quantity` will be added to the usage at the specified timestamp. The `set` action will overwrite the usage quantity at that timestamp. If the subscription has [billing thresholds](https://stripe.com/docs/api/subscriptions/object#subscription_object-billing_thresholds), `increment` is the only allowed value.
     required:
       - quantity
       - subscription_item
       - timestamp
-      
+
   # Usage record summary
   usageRecordSummary:
     description: A dictionary with a `data` property that contains an array of up to `limit` summaries, starting after summary `starting_after`. Each entry in the array is a separate summary object. If no more summaries are available, the resulting array is empty.
     properties:
       object:
         type: string
-        description: String representing the objectâ€™s type. Objects of the same type share the same value. 
+        description: String representing the objectâ€™s type. Objects of the same type share the same value.
         enum:
           - list
       url:
@@ -143,12 +143,12 @@ definitions:
         description: URL of the subscription item summaries.
       has_more:
         type: boolean
-        description: Whether or not there are more elements available after this set. If `false`, this set comprises the end of the list.  
+        description: Whether or not there are more elements available after this set. If `false`, this set comprises the end of the list.
       data:
         type: array
-        items: 
-          $ref: '#/definitions/usageRecordData'   
-  
+        items:
+          $ref: '#/definitions/usageRecordData'
+
   # Usage record summary data
   usageRecordData:
     properties:
@@ -157,9 +157,9 @@ definitions:
         description: ID of the usage record.
       object:
         type: string
-        description: String representing the objectâ€™s type. Objects of the same type share the same value. 
+        description: String representing the objectâ€™s type. Objects of the same type share the same value.
         enum:
-          - usage_record_summary  
+          - usage_record_summary
       invoice:
         type: string
         description: ID of the invoice.
@@ -169,19 +169,19 @@ definitions:
       period:
         type: object
         description: Time period.
-        properties: 
+        properties:
           end:
             type: integer
             description: Ending timestamp.
           start:
             type: integer
-            description: Starting timestamp.           
-      subscription_item: 
+            description: Starting timestamp.
+      subscription_item:
         type: string
         description: ID of the subscription item.
-      total_usage: 
+      total_usage:
         type: integer
-        description: The total number of usage records in the billing plan.     
+        description: The total number of usage records in the billing plan.
 securityDefinitions:
   basicAuth:
     type: basic
