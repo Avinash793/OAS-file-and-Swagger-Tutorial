@@ -24,9 +24,9 @@ This Tutorial contains two assignments to create OAS file using swagger editor a
 
 1. Music API Assignment: Follow exercises 2,3,4,5 and 6. It will give you good understanding of OAS file and Swagger. It contains "MusicAPI.yaml" file that is final OAS file after you follow all the exercises. It also have folder "Swagger-client-code-generated" which contain automatically generated client code in different programming languages (GO/JAVA/JAVASCRIPT). 
 
-For API Documentation, you can see it will generate on right side of your swagger editor. 
+  For API Documentation, you can see it will generate on right side of your swagger editor. 
 
-You can see Swagger UI same as image attached below:
-![alt text](https://github.com/AVINASH793/OAS-file-and-Swagger-Tutorial/blob/master/SwaggerUI.png "Logo Title Text 1")
+  You can see Swagger UI same as image attached below:
+  ![alt text](https://github.com/AVINASH793/OAS-file-and-Swagger-Tutorial/blob/master/SwaggerUI.png "Logo Title Text 1")
 
 2. Stripe Assignment: This contain assignment with step to step guide to make OAS file and 
