@@ -32,6 +32,15 @@ This Tutorial contains two assignments to create OAS file using swagger editor a
   For API Documentation, you can see it will generate on right side of your swagger editor. 
 
   You can see Swagger UI same as image attached below:
-  ![alt text](https://github.com/AVINASH793/OAS-file-and-Swagger-Tutorial/blob/master/SwaggerUI.png "Logo Title Text 1")
+  
+  ![alt text](https://github.com/AVINASH793/OAS-file-and-Swagger-Tutorial/blob/master/SwaggerUI_Images/SwaggerUI_MUSICAPI.png "Logo Title Text 1")
 
-2. Stripe Assignment: This contain assignment with step to step guide to make OAS file (with real REST API) and use swagger tool for various purposes as mentioned above.
+
+2. Stripe Assignment: This contain assignment with step to step guide to make OAS file (with real REST API) and use swagger tool for various purposes as mentioned above. It also have folder "Swagger-client-code-generated" which contain automatically generated client code in different programming languages (GO/PYTHON) and "Swagger-server-code-generated" which contain automatically generated sever code in different programming languages (GO). 
+
+  For API Documentation, you can see it will generate on right side of your swagger editor. 
+
+  You can see Swagger UI same as image attached below:
+  
+  ![alt text](https://github.com/AVINASH793/OAS-file-and-Swagger-Tutorial/blob/master/SwaggerUI_Images/SwaggerUI_StripeAPI.png "Logo Title Text 1")
+
